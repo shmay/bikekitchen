@@ -7,6 +7,7 @@ gem 'rails'
 
 gem 'pg'
 gem 'devise'
+gem 'haml-rails'
 gem 'jbuilder', git: 'https://github.com/rails/jbuilder.git'
 gem 'ejs'
 gem 'debugger'
