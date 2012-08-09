@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-dropdown
+//= require bootstrap-modal
+//= require bootstrap-tooltip
+//= require bootstrap-popover
 //= require underscore
 //= require backbone
 //= require bb/app

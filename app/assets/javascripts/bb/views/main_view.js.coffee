@@ -3,6 +3,6 @@ App.Views.Main = Backbone.View.extend
   initialize: ->
     App.vent.on "showCal", @showCal, this
 
-  showCal: ->
-    view = new App.Views.Calendar()
+  showCal: (events) ->
+    view = new App.Views.Calendar(collection:events)
     @$el.append view.render().el

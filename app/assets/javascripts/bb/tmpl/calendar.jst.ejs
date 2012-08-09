@@ -1,7 +1,30 @@
-<% for(var i=0;i < 5;i++) { %>
-  <tr>
-    <% for(var j=0;j < 7;j++) { %>
-      <div class='span2'><%= j %></div>
+<div class='row-fluid' style="text-align:center">
+  <i class='icon icon-arrow-left prev' style="cursor:pointer;"></i>
+    <%=friendly_month%>
+  <i class='icon icon-arrow-right next' style="cursor:pointer;"></i>
+</div>
+<div class='row-fluid'>
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <% for(var d=0;d<days.length;d++) { %>
+        <th><%= days[d] %></th>
+      <% } %>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(var i=0;i < 35;i++) { %>
+      <% if (i % 7 === 0) { %>
+        <% if (i!==0) { %>
+          </tr>
+        <%}%>
+        <tr>
+      <% } %>
+      <td class='cell'>
+        <%= date_and_month(i+1,start_day,month) %>
+      </td>
     <% } %>
-  </tr>
-<% } %>
+  </tbody>
+</table>

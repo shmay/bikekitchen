@@ -1,0 +1,8 @@
+<script type='text/javascript'>
+  $(function() {
+    App.account = new App.Models.Account(<%= render('accounts/account.json.jbuilder').html_safe %>);
+    App.events = new App.Lists.Events(<%= render('events/index.json.jbuilder').html_safe %>, {silent:true});
+    App.users = new App.Lists.Users(<%= render('users/index.json', formats: :json).html_safe %>, {silent:true});
+    App.vent.trigger('showCal',App.events);
+  });
+</script>

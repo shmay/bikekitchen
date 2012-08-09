@@ -1,9 +1,8 @@
 Sched::Application.routes.draw do
-  resources :events
-
-  resources :locations
-
-  resources :accounts
+  resources :accounts do
+    resources :events
+    resources :users
+  end
 
   devise_for :users
 
